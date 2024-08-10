@@ -153,7 +153,7 @@ A depth-first search algorithm exhausts each one direction before trying another
 
 Code example:
 
-```
+```python
 # Define the function that removes a node from the frontier and returns it.
 
 def  remove(self):
@@ -192,7 +192,7 @@ A breadth-first search algorithm will follow multiple directions at the same tim
 
 Code example:
 
-```
+```python
 # Define the function that removes a node from the frontier and returns it.
 
 def  remove(self):
