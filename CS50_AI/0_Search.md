@@ -153,29 +153,20 @@ A depth-first search algorithm exhausts each one direction before trying another
 
 Code example:
 
+```
 # Define the function that removes a node from the frontier and returns it.
 
 def  remove(self):
-
-# Terminate the search if the frontier is empty, because this means that there is no solution.
-
-if self.empty():
-
-raise  Exception("empty frontier")
-
-else:
-
-# Save the last item in the list (which is the newest node added)
-
-node = self.frontier[-1]
-
-# Save all the items on the list besides the last node (i.e. removing the last node)
-
-self.frontier = self.frontier[:-1]
-
-return node
-
-  
+    # Terminate the search if the frontier is empty, because this means that there is no solution.
+    if self.empty():
+        raise  Exception("empty frontier")
+    else:
+    # Save the last item in the list (which is the newest node added)
+        node = self.frontier[-1]
+    # Save all the items on the list besides the last node (i.e. removing the last node)
+    self.frontier = self.frontier[:-1]
+    return node
+```
 
 #### [Breadth-First Search](https://cs50.harvard.edu/ai/2024/notes/0/#breadth-first-search)
 
@@ -201,28 +192,22 @@ A breadth-first search algorithm will follow multiple directions at the same tim
 
 Code example:
 
+```
 # Define the function that removes a node from the frontier and returns it.
 
 def  remove(self):
 
-# Terminate the search if the frontier is empty, because this means that there is no solution.
+    # Terminate the search if the frontier is empty, because this means that there is no solution.
+    if self.empty():
+        raise  Exception("empty frontier")
+    else:
+    # Save the oldest item on the list (which was the first one to be added)
+        node = self.frontier[0]
+    # Save all the items on the list besides the first one (i.e. removing the first node)
+    self.frontier = self.frontier[1:]
+    return node
 
-if self.empty():
-
-raise  Exception("empty frontier")
-
-else:
-
-# Save the oldest item on the list (which was the first one to be added)
-
-node = self.frontier[0]
-
-# Save all the items on the list besides the first one (i.e. removing the first node)
-
-self.frontier = self.frontier[1:]
-
-return node
-
+```
   
 
 #### [Greedy Best-First Search](https://cs50.harvard.edu/ai/2024/notes/0/#greedy-best-first-search)
